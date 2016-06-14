@@ -77,12 +77,7 @@ public class MainActivity extends AppCompatActivity {
             /*
             Below code has been used for showing scrolling action by setting left margin of sliding indicator
              */
-            int checkOffset = Float.compare(0, positionOffset);
-            if (checkOffset == 0) {
-                layoutParams.leftMargin = marginLeft + slideIndicatorWidth * position;
-            } else {
-                layoutParams.leftMargin = marginLeft + (int) (slideIndicatorWidth * (position + positionOffset));
-            }
+            layoutParams.leftMargin = marginLeft + (int) (slideIndicatorWidth * (position + positionOffset));
             slideIndicator.setLayoutParams(layoutParams);
 
             /*
